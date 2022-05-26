@@ -1,3 +1,11 @@
+name: CI
+on:
+  push:
+    branches:
+      – main
+    paths:
+      – ‘dbscripts/**’
+
 jobs:
   build:
     runs-on: ubuntu-latest
