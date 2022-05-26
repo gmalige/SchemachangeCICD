@@ -31,7 +31,7 @@ jobs:
           SF_DATABASE: ${{ secrets.SF_DATABASE }}
         run: |
           echo “GITHUB WORKSPACE $GITHUB_WORKSPACE”
-          python –-version
+          python -version
           echo “Step 1: Initializing Schemachange”
           pip install schemachange
          
