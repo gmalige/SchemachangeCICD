@@ -1,16 +1,20 @@
-name: CI
+name: SchemachangeCICD
 on:
   push:
     branches:
       – main
     paths:
-      – ‘dbscripts/**’
+      – 'dbscripts/**'
+      
+Workflow_dispatch:      
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout repository
       – uses: actions/checkout@v2
+      
       – name: Use Python 3.8.x
         uses: actions/setup-python@v2.2.1
         with:
